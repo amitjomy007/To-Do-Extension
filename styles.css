@@ -1,0 +1,21 @@
+.column{
+    display: inline-block;  
+    width : 250px;  
+}
+
+.Rcolumn{
+    display :inline;
+}
+
+.input-grid,
+.todo-grid
+            {
+    display: grid;
+    grid-template-columns: 270px 270px 50px;
+    row-gap : 10px;
+    
+}
+
+.input-grid {
+    margin-bottom : 10px;
+}
