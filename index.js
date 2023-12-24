@@ -1,8 +1,8 @@
 document.getElementById("add-el").addEventListener("click",  addTask );
 
-var rows = [];
+var rows = JSON.parse(localStorage.getItem('rows')) || [];
 var str = "";
-
+updateinnerHTML();
 function addEventListenerToAllDeleteButtons(arr){
     for (let i = 0 ; i< arr.length ; i++){
         document.getElementById(`delete-${i}th`).addEventListener("click", function DeleteAndUpdate() {
@@ -18,14 +18,16 @@ function addTask() {
     var date = document.getElementById("date-input-el").value;
     rows.push([task,date]);
     renderHTML(rows);
-    document.getElementById("container-El").innerHTML = str;   //these three lines maybe replaced
+    document.getElementById("container-El").innerHTML = str;   //these four lines maybe replaced
     addEventListenerToAllDeleteButtons(rows);                  // with updateinnerHTML() function.
+    localStorage.setItem('rows', JSON.stringify(rows))
 }
 
 function updateinnerHTML() {
     renderHTML(rows);
     document.getElementById("container-El").innerHTML = str;
     addEventListenerToAllDeleteButtons(rows);
+    localStorage.setItem('rows', JSON.stringify(rows))
     
 }
 
