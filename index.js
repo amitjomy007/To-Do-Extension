@@ -8,9 +8,9 @@ function loadPage() {
     <p>Let's be productive ${user}!</p>   
             
     <div id="input-div" class = "input-grid">
-        <input id = "task-input-el" class = "Lcolumn column" type="text" placeholder="Enter your Task">
-        <input id = "date-input-el" class = "Mcolumn column" type = "datetime-local">
-        <button id = "add-el" class = "Rcolumn column">Add</button>
+        <input id = "task-input-el" class = "Lcolumn column input" type="text" placeholder="Enter your Task">
+        <input id = "date-input-el" class = "Mcolumn column input" type = "datetime-local">
+        <button id = "add-el" class = "Rcolumn column add">Add</button>
     </div> 
     
     <div id = "container-El" class = "container todo-grid "></div>`
@@ -57,9 +57,9 @@ function loadPage() {
                 task = arr[i][0];
                 date = arr[i][1];
                 str += `
-                            <div class="Lcolumn column">${task}</div>
+                            <div class="Lcolumn1 column">${task}</div>
                             <div class="Mcolumn column">${date}</div>
-                            <button class="Rcolumn column" id = "delete-${i}th">Delete</button>
+                            <button class="Rcolumn column delete" id = "delete-${i}th">Delete</button>
                         `;
             }
         }

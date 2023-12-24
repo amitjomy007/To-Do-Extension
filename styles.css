@@ -7,15 +7,71 @@
     display :inline;
 }
 
+.Lcolumn1{
+    margin-left : 12px;
+    text-shadow: 3px 5px 10px #0000006e;
+}
+.Mcolumn{
+    text-shadow: 3px 5px 10px #0000006e;
+}
+
 .input-grid,
 .todo-grid
             {
     display: grid;
-    grid-template-columns: 270px 270px 50px;
-    row-gap : 10px;
+    grid-template-columns: 300px 300px 50px;
+    row-gap : 12px;
     
 }
 
 .input-grid {
-    margin-bottom : 10px;
+    margin-bottom : 12px;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('img.png');
+    background-repeat : no-repeat;
+    background-size : cover;
+}
+
+.load {
+    background-color: rgb(29, 155, 240);
+    color: white;
+    border-width: 0px;
+    width : 120px;
+    border-radius: 60px;
+    padding : 4px 0px;
+    box-shadow: 3px 5px 10px #000;
+    
+}
+
+.input {
+    box-shadow: 3px 5px 10px #000;
+    border-width : 0px;
+    padding : 5px 15px;
+    border-radius: 100px;
+}
+
+.add , .delete {
+    box-shadow: 3px 5px 10px #000;
+    border-radius : 60px;
+    padding : 5px 5px;
+}
+
+.add {
+    color: white;
+    font-weight: bold;
+    background-color: rgb(9, 177, 34);
+}
+
+.delete{
+    color: black;
+    font-weight: bold;
+    background-color: rgb(255,216,20);
+}
+.Head1{
+    color: white;
+    text-shadow: 3px 5px 10px #000;;
+    
 }
